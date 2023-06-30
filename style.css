@@ -1,0 +1,264 @@
+ :root{
+    --background-color: #feefe3 ;
+    --primary-color: #ed9b59;
+    --dark-color: #1a1d32;
+    --grey-color: #7d8790; 
+    --white-color: #fff;
+    --brown-color: #B25E21; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Rubiks", san-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background-image: url("/images/logo.jpg");
+    background-color: var(--background-color);
+    min-height: 30vhs;
+}
+
+.nav {
+    position: relative;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 2;
+    width: 100%;
+}
+
+.logo-container {
+  flex: 0.3%; 
+}
+.logo {
+    width: 100px;
+}
+.list-items 
+{
+    display: flex;
+    flex: 0.7;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+}
+.list {
+    list-style: none;
+}
+.link {
+    color: var(--grey-color);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    background: var(--primary-color);
+    top: 25px;
+    left: 50%;
+    transform: translatex(-50%);
+    border-radius: 5px;
+    display: none;
+    transition: 0.2s;
+}
+
+.link:hover{
+    color: var(--primary-color);
+}
+.link:hover::before {
+    display: block;
+}
+.btn-container {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+
+.btn {
+    padding: 15px 30px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+}
+.btn-secondary { 
+    background: var(--white-color);
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
+    transition: 0.2s;
+}
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+.container {
+    display: flex;
+    min-height: 92vh;
+}
+
+.container-left,
+container-right{
+    z-index: 1;
+    flex: 1;
+}
+.container-left{
+    padding: 100px;
+    padding-left: 40px;
+    position: relative;
+}
+.couples-img {
+    width: 100%;
+    height: 100%;
+}
+.text-small{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.title {
+    margin-top: 20px;
+    font-size: 4.2rem;
+}
+.title-s{
+    color: var(--primary-color);
+}
+.text {
+    margin-top: 20px;
+    font-size: 23px;
+    line-height: 40px;
+    width: 80%;
+    color: var(--grey-color);
+}
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 80%;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px; rgba(0,0,0.1);
+    padding-left: 2px;
+    padding-right: 10px;
+}
+
+.input-container input {
+    color: var(--grey-color);
+    border: none;
+    font-size: 15px;
+    flex: 1px;
+    margin-left: 10px;
+    outline: none;
+}
+.stats-container {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.stats {
+    width: 25%;
+}
+
+.stats-title {
+    font-size: 4rem;
+    color: var(--brown-color);
+}
+.statas-title-brown {
+    color: var(--brown-color);
+}
+.stats-text {
+    color: var(--dark-color);
+    font-size: 20px;
+    margin-top: 20px;
+}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+.couples2-img-mobile {
+    display: none;
+}
+.loginmenu-btn {
+    position: absolute;
+    width: 30px;
+    right: 20px;
+    display: inline;
+}
+.list-items.open{
+    top: 0;
+}
+
+@media(max-width: 1230px) {
+.title{
+    font-size: 3rem;
+}
+
+.container{
+    padding-top: 100px ;
+    flex-direction: column-reverse;
+
+}
+}
+.input-container input{
+    width: 80%;
+    font-size: 13px;
+}
+.stats-title {
+    font-size: 2.2rem;
+}
+.stats-text{
+    font-size: 15px;
+}
+.btn{
+    padding: 10px 20px;
+    font-size: 14px;
+
+
+}
+.nav {
+    position: fixed;
+    background: var(--background-color);
+    height: 60px;
+}
+.loginmenu-btn {
+    display: block;
+}
+
+.logo-container {
+    background: var(--background-color);
+    display: flex;
+    z-index: 1;
+    flex: 1;
+    align-items: center;   
+    height: 100%;
+}
+.list-items {
+    position: absolute;
+    flex-direction: row;
+    width: 100%;
+    left: 0;
+    background: var(--background-color);
+    padding: 40px;
+    top: 400px;
+}
+.list {
+    margin: 25px;
+    font-size: 14px;
+}
+.btn-container {
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+}
+
+    
